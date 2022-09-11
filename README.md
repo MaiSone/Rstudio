@@ -1,19 +1,12 @@
 # Rstudio
-
-Dockerfiles
-Use r-base as a base for your own Dockerfiles. For instance, something along the lines of the following will compile and run your project:
+初回コミット時
 ```
-FROM r-base
-COPY . /usr/local/src/myscripts
-WORKDIR /usr/local/src/myscripts
-CMD ["Rscript", "myscript.R"]
-Build your image with the command:
+git remote set-url origin https://MaiSone@github.com/MaiSone/Rstudio.git
 ```
-
+起動
 ```
-$ docker build -t myscript /path/to/Dockerfile
+docker-compose up -d
 ```
-Running this container with no command will execute the script. Alternatively, a user could run this container in interactive or batch mode as described above, instead of linking volumes.
-
-Further documentation and example use cases can be found at the rocker-org project wiki.
+http://localhost:8787にアクセス、
+ユーザーネームはデフォルト「rstudio」
 
