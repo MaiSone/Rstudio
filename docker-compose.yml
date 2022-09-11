@@ -1,0 +1,15 @@
+version: '3'
+services:
+  rstudio:
+    build: .
+    image: tidyverse:3.6.3_jp
+    container_name: tidyverse_jp
+    environment: 
+      #任意のパスワードを設定する
+      - PASSWORD=ye9aazmT
+    ports:
+      - 8787:8787
+    volumes:
+      - ./R:/home/rstudio
+    tty: true
+    stdin_open: true
